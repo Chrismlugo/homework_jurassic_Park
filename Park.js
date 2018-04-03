@@ -7,12 +7,6 @@ Park.prototype.addDino = function (dino) {
 };
 
 Park.prototype.removeDinoType = function (type) {
-  // for(let dinosaur of this.enclosure){
-  //   if(dinosaur.type === type){
-  //     var index = this.enclosure.indexOf(dinosaur);
-  //     this.enclosure.splice(index);
-  //   }
-  // }
   const result = this.enclosure.filter(dino => dino.type !== type);
   this.enclosure = result;
 };
@@ -31,9 +25,7 @@ Park.prototype.calculatePopulationGrowth = function (dino, year) {
 
 Park.prototype.calculateTotalPopulationGrowth = function (year) {
     var result = 0
-    //     result += dino.offspring * year + 1;
-    //
-    //     return result;
+
     for(let dino of this.enclosure){
       result += dino.offspring * year;
     }
