@@ -29,4 +29,16 @@ Park.prototype.calculatePopulationGrowth = function (dino, year) {
         return result;
 };
 
+Park.prototype.calculateTotalPopulationGrowth = function (year) {
+    var result = 0
+    //     result += dino.offspring * year + 1;
+    //
+    //     return result;
+    for(let dino of this.enclosure){
+      result += dino.offspring * year;
+    }
+    result += this.enclosure.length;
+    return result;
+};
+
 module.exports = Park;

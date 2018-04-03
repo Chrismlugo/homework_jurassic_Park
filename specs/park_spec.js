@@ -49,4 +49,11 @@ it('can calculate number of dinos after two years based on one dino', function()
   assert.strictEqual(park.calculatePopulationGrowth(dinosaur2, 2), 7);
 });
 
+it('can calculate estimated population of dinos after one year', function(){
+  assert.strictEqual(park.calculateTotalPopulationGrowth(1), 10);
+})
+it('can calculate estimated population of dinos after two years', function(){
+  assert.strictEqual(park.calculateTotalPopulationGrowth(2), 17);
+})
+
 });
