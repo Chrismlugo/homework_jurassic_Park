@@ -22,4 +22,11 @@ Park.prototype.getDinosWithHighOffspringCount = function () {
   return result;
 };
 
+Park.prototype.calculatePopulationGrowth = function (dino, year) {
+    var result = 0
+        result += dino.offspring * year + 1;
+
+        return result;
+};
+
 module.exports = Park;

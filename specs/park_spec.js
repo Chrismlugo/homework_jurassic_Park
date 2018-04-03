@@ -37,8 +37,16 @@ it('can remove dino of type', function(){
   assert.deepStrictEqual(park.enclosure, [dinosaur4]);
 });
 
-it('can get dinosaurs of offspring count', function(){
+it('can get dinosaurs of high offspring count', function(){
   assert.deepStrictEqual(park.getDinosWithHighOffspringCount(), [dinosaur2,dinosaur3]);
+});
+
+it('can calculate number of dinos after one year based on one dino', function(){
+    assert.strictEqual(park.calculatePopulationGrowth(dinosaur2, 1), 4);
+});
+
+it('can calculate number of dinos after two years based on one dino', function(){
+  assert.strictEqual(park.calculatePopulationGrowth(dinosaur2, 2), 7);
 });
 
 });
