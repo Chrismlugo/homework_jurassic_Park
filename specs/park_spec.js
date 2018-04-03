@@ -32,9 +32,13 @@ describe('Park with dinos', function(){
   });
 
 it('can remove dino of type', function(){
-  park.removeDinoType("T-Rex");
-  assert.strictEqual(park.enclosure.length, 2);
-  assert.deepStrictEqual(park.enclosure, [dinosaur2, dinosaur3]);
+  park.removeDinoType("Triceratops");
+  assert.strictEqual(park.enclosure.length, 1);
+  assert.deepStrictEqual(park.enclosure, [dinosaur4]);
+});
+
+it('can get dinosaurs of offspring count', function(){
+  assert.deepStrictEqual(park.getDinosWithHighOffspringCount(), [dinosaur2,dinosaur3]);
 });
 
 });

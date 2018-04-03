@@ -17,4 +17,9 @@ Park.prototype.removeDinoType = function (type) {
   this.enclosure = result;
 };
 
+Park.prototype.getDinosWithHighOffspringCount = function () {
+  const result = this.enclosure.filter(dino => dino.offspring > 2);
+  return result;
+};
+
 module.exports = Park;
